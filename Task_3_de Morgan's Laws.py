@@ -9,14 +9,12 @@ import time
 def check_statement():
     
     num_predicates = random.randint(3, 15)
-
     predicates = [random.choice([True, False]) for _ in range(num_predicates)]  # Генерация случайных булевых значений для каждого предиката
 
-    left_side = any(predicates)  # Вычисление левой части утверждения
-
+    left_side = any(predicates)                  # Вычисление левой части утверждения
     right_side = all(not p for p in predicates)  # Вычисление правой части утверждения
 
-    statement = not left_side == right_side # Проверка истинности утверждения
+    statement = not left_side == right_side      # Проверка истинности утверждения
 
     return statement
 
@@ -28,3 +26,4 @@ for _ in range(100):
 end_time = time.time()
 
 print(f"Время выполнения программы: {end_time - start_time} секунд.")
+print()

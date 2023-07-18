@@ -22,4 +22,5 @@ def all_divisors(num):
     return divisors
 
 num = int(input("Введите число: "))
+print()
 print(f"Делители числа {num}: {all_divisors(num)}")

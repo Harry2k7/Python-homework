@@ -15,33 +15,7 @@ def sum_of_digits(num):
         digit = int(fractal_part) % 10
         sum += digit
         fractal_part -= digit
-
     return sum
-
 
 num = float(input("Введите любое число: "))
 print(f"Сумма цифр числа {num} равна {sum_of_digits(num)}")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# num = input("Введите число: ")
-
-# sum = 0
- 
-# for digit in num:
-#     if digit.isdigit():
-#         sum += int(digit)
- 
-# print(f'Сумма чисел: {num} равна {sum}')

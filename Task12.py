@@ -8,8 +8,8 @@
 sum = int(input('Введите сумму чисел: '))
 prod = int(input('Введите произведение чисел: '))
 
-X = (sum - int((sum ** 2 - 4 * prod) ** 0.5)) // 2
-Y = sum - X
-if X <= 1000 and Y <= 1000:
-    print('Петя обманул')
-print(f'числа задуманные Петей{X, Y}')
+for x in range(1, 1001):
+    y = sum - x
+    if x * y == prod:
+        print(f'Числа задуманные Петей {min(x, y), max(x, y)}')
+        break
