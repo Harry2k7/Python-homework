@@ -9,7 +9,7 @@ import random
 
 
 
-def max_berries(berr):
+def max_berries(berr) -> int:
     num = len(berr)
     if num == 0:
         return 0
