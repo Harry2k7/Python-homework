@@ -18,11 +18,9 @@
 # Зенит: 2 1 0 1 3
 # Локомотив: 2 2 0 0 6
 
-from typing import Dict, List
 
-
-def calculate_points(results: List[str]) -> Dict[str, Dict[str, int]]:
-    team_points: Dict[str, Dict[str, int]] = {}
+def calculate_points(results: list[str]) -> dict[str, dict[str, int]]:
+    team_points: dict[str, dict[str, int]] = {}
 
     for match in results:
         team1, score1, team2, score2 = match.split(";")
@@ -52,7 +50,7 @@ def calculate_points(results: List[str]) -> Dict[str, Dict[str, int]]:
     return team_points
 
 
-def display_table(team_points: Dict[str, Dict[str, int]]) -> None:
+def display_table(team_points: dict[str, dict[str, int]]) -> None:
     print()
     print("Команда:    Всего игр Побед Ничьих Поражений Всего очков")
 

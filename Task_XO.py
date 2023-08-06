@@ -63,7 +63,6 @@ def play_game()-> None:   # Основная функция игры
     board = [[" " for _ in range(3)] for _ in range(3)]
     display_board(board)
     
-    # Основной игровой цикл
     while True:
         while True:
             row = int(input("Введите номер строки (от 1 до 3): ")) - 1
@@ -76,13 +75,11 @@ def play_game()-> None:   # Основная функция игры
         
         display_board(board)
         
-        # Проверка выигрыша игрока
-        if check_win(board, "X"):
+        if check_win(board, "X"):             # Проверка выигрыша игрока
             print("Вы победили!")
             break
         
-        # Проверка на ничью
-        if all(board[i][j] != " " for i in range(3) for j in range(3)):
+        if all(board[i][j] != " " for i in range(3) for j in range(3)):    # Проверка на ничью
             print("Ничья!")
             break
         
@@ -91,8 +88,7 @@ def play_game()-> None:   # Основная функция игры
         print("Ход бота:")
         display_board(board)
         
-        # Проверка выигрыша бота
-        if check_win(board, "O"):
+        if check_win(board, "O"):            # Проверка выигрыша бота
             print("Бот победил!")
             break
 

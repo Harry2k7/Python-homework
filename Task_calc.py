@@ -4,16 +4,12 @@
 # 1+2*3 => 7; 
 # 1-2*3 => -5;
 # - Добавьте возможность использования скобок, меняющих приоритет операций.
-#     *Пример:* 
-#     1+2*3 => 7; 
-#     (1+2)*3 => 9;
 # Тут может помочь библиотека re
 
 import re
  
  
 actions = {
-  "^": lambda x, y: str(float(x)**float(y)),
   "*": lambda x, y: str(float(x) * float(y)),
   "/": lambda x, y: str(float(x) / float(y)),
   "+": lambda x, y: str(float(x) + float(y)),
@@ -22,7 +18,6 @@ actions = {
  
 priority_reg_exp = r"\((.+?)\)"
 action_reg_exp = r"(-?\d+(?:\.\d+)?)\s*\{}\s*(-?\d+(?:\.\d+)?)"
- 
  
  
 def my_evaluate(expresion: str) -> str:
