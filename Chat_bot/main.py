@@ -2,7 +2,7 @@ import random
 import json
 import os
 
-QUOTES_FILE = "quotes.json"
+QUOTES_FILE = "Chat_bot\quotes.json"
 
 # Загрузка цитат из json файла
 def load_quotes():
